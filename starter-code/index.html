@@ -10,5 +10,84 @@
   <title>Ironhack cart</title>
 </head>
 <body>
+	<header>
+		<div class="container">
+			<div class="row">
+				<h1>
+					Ironhack<br />
+					Merchandising Shop
+				</h1>
+			</div>		
+		</div>
+	</header>
+
+	<main>
+		<div class="container">
+			<div class="row item">
+				<div class="col">
+					Product
+				</div>
+				<div class="col col-price">
+					$ 25.00
+				</div>
+				<div class="col">
+					<label>QTY</label>
+				</div>
+				<div class="col">
+					<input type="text" value="0" />
+				</div>
+				<div class="col col-total">
+					$ 0.00
+				</div>
+				<div class="col col-btns">
+					<button class="btn btn-delete">Delete</button>
+				</div>
+			</div>
+
+			<div class="row item">
+				<div class="col">
+					Product
+				</div>
+				<div class="col col-price">
+					$ 50.00
+				</div>
+				<div class="col">
+					<label>QTY</label>
+				</div>
+				<div class="col">
+					<input type="text" value="0" />
+				</div>
+				<div class="col col-total">
+					$ 0.00
+				</div>
+				<div class="col col-btns">
+					<button class="btn btn-delete">Delete</button>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col">
+					<input type="text" value="" placehooder="Nome" class="new-item-name" />
+				</div>
+				<div class="col">
+					<input type="text" value="" placehooder="Valor" class="new-item-value" />
+				</div>
+				<div class="col">
+					<button id="new-item-create" class="btn">
+						Criar
+					</button>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-100">
+					<button id="calc-prices-button" class="btn btn-green">
+						Calcular total
+					</button>
+				</div>
+			</div>
+		</div>
+	</main>
+
 </body>
 </html>

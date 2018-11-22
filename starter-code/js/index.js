@@ -1,5 +1,7 @@
 function deleteItem(e){
-
+	var selectedRow = e.currentTarget.parentNode.parentNode;
+	var itemList = selectedRow.parentNode;
+	itemList.removeChild(selectedRow);
 }
 
 function getPriceByProduct(itemNode){
