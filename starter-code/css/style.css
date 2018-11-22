@@ -24,11 +24,6 @@ input {
   border-radius: 4px;
 }
 
-.btn-green {
-  background: green;
-  color: #FFF;
-}
-
 .btn-success {
     color: #fff;
     background-color: #5cb85c;
@@ -43,40 +38,4 @@ input {
 
 .quantity {
   margin: 0 5px;
-}
-
-.container {
-  margin: 10px auto;
-  width: 900px;
-}
-
-.row {
-  clear: both;
-  overflow: hidden;
-  padding: 10px 0;
-  position: relative;
-}
-
-.item {
-  padding: 5px 0;
-}
-
-.col {
-  float: left;
-  width: 16.65%;
-}
-
-.col-100 {
-  text-align: center;
-  width: 100%;
-}
-
-label {
-  float: left;
-  margin: 0 10px 0 0;
-}
-
-input {
-  float: left;
-  width: 70%;
 }
