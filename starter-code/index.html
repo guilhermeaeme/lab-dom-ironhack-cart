@@ -10,5 +10,85 @@
   <title>Ironhack cart</title>
 </head>
 <body>
+
+	<header>
+		<div class="container">
+			<div class="row">
+				<div class="col col-3 col-offset-2">
+					<h1>
+						Ironhack<br />
+						Merchandising Shop
+					</h1>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<span>IronBubble-head</span>
+				</div>
+				<div class="col col-price">
+					<span class="span-price">25.00</span>
+				</div>
+				<div class="col">
+					<label>QTY</label>
+					<input type="text" class="qty" name="qty" value="0" />
+				</div>
+				<div class="col col-total-price">
+					<span class="span-total-price">0.00</span>
+				</div>
+				<div class="col">
+					<button class="btn btn-delete">
+						Delete
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<span>IronShirt-head</span>
+				</div>
+				<div class="col col-price">
+					<span class="span-price">15.00</span>
+				</div>
+				<div class="col">
+					<label>QTY</label>
+					<input type="text" class="qty" name="qty" value="0" />
+				</div>
+				<div class="col col-total-price">
+					<span class="span-total-price">0.00</span>
+				</div>
+				<div class="col">
+					<button class="btn btn-delete">
+						Delete
+					</button>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col col-3 col-offset-2">
+					<button id="calc-prices-button" class="btn btn-success">
+						Calculate Prices
+					</button>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col col-3 col-offset-2">
+					<h2>Total Price: <span id="total-price">0.00</span></h2>
+				</div>
+			</div>
+		</div>
+	</footer>
+
 </body>
 </html>

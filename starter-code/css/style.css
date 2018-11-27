@@ -2,6 +2,16 @@ input {
   border: solid 1px black;
 }
 
+input[name="qty"] {
+  text-align: center;
+  width: 75px;
+}
+
+header,
+footer {
+  padding: 15px 0;
+}
+
 .btn {
   display: inline-block;
   padding: 6px 12px;
@@ -38,4 +48,34 @@ input {
 
 .quantity {
   margin: 0 5px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 98%;
+}
+
+.row {
+  overflow: hidden;
+  padding: 5px 0;
+  position: relative;
+}
+
+.col {
+  float: left;
+  width: 20%;
+}
+
+.col-3 {
+  width: 60%;
+}
+
+.col-offset-2 {
+  margin-left: 40%;
+}
+
+.col-price span:before,
+.col-total-price span:before,
+#total-price:before {
+  content: '$ ';
 }
