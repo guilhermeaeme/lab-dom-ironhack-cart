@@ -61,6 +61,7 @@ function createQuantityNode(){
 
   var input = document.createElement('input');
   input.name = 'qty';
+  input.value = 0;
   input.className = 'qty';
   input.onkeyup = getTotalPrice;
 
