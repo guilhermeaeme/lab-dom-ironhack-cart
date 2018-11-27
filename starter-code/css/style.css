@@ -1,5 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+label {
+  float: left;
+  margin: 0 5px;
+}
+
 input {
   border: solid 1px black;
+  width: 100%;
 }
 
 input[name="qty"] {
@@ -56,13 +66,15 @@ footer {
 }
 
 .row {
+  clear: both;
   overflow: hidden;
-  padding: 5px 0;
+  padding: 10px 0;
   position: relative;
 }
 
 .col {
   float: left;
+  padding: 0 5px;
   width: 20%;
 }
 

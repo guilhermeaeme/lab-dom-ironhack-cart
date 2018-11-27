@@ -25,7 +25,7 @@
 	</header>
 
 	<main>
-		<div class="container">
+		<div id="cart" class="container">
 			<div class="row">
 				<div class="col">
 					<span>IronBubble-head</span>
@@ -46,12 +46,10 @@
 					</button>
 				</div>
 			</div>
-		</div>
 
-		<div class="container">
 			<div class="row">
 				<div class="col">
-					<span>IronShirt-head</span>
+					<span>IronShirt</span>
 				</div>
 				<div class="col col-price">
 					<span class="span-price">15.00</span>
@@ -66,6 +64,22 @@
 				<div class="col">
 					<button class="btn btn-delete">
 						Delete
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<input type="text" id="new-item-name" />
+				</div>
+				<div class="col">
+					<input type="text" id="new-item-price" />
+				</div>
+				<div class="col col-offset-2">
+					<button id="new-item-create" class="btn">
+						Create
 					</button>
 				</div>
 			</div>
