@@ -72,7 +72,18 @@ function createQuantityNode(){
 }
 
 function createItemNode(dataType, itemData){
+  var itemNode = document.createElement('div');
+  itemNode.className = 'col col-' + itemData.class;
+  var spanNode = document.createElement('span');
+  spanNode.className = 'span-' + itemData.class;
+  if(dataType == 'number') {
+    spanNode.innerHTML = Number(itemData.value).toFixed(2);
+  } else {
+    spanNode.innerHTML = itemData.value;
+  }
+  itemNode.appendChild(spanNode);
 
+  return itemNode;  
 }
 
 function createNewItemRow(itemName, itemUnitPrice){
@@ -81,30 +92,10 @@ function createNewItemRow(itemName, itemUnitPrice){
   var row = document.createElement('div');
   row.className = 'row';
 
-  var colName = document.createElement('div');
-  colName.className = 'col';
-  var spanName = document.createElement('span');
-  spanName.innerHTML = itemName;
-  colName.appendChild(spanName);
-
-  var colPrice = document.createElement('div');
-  colPrice.className = 'col col-price';
-  var spanPrice = document.createElement('span');
-  spanPrice.className = 'span-price';
-  spanPrice.innerHTML = Number(itemUnitPrice).toFixed(2);
-  colPrice.appendChild(spanPrice);
-
-  var colTotalPrice = document.createElement('div');
-  colTotalPrice.className = 'col col-total-price';
-  var spanTotalPrice = document.createElement('span');
-  spanTotalPrice.className = 'span-total-price';
-  spanTotalPrice.innerHTML = '0.00';
-  colTotalPrice.appendChild(spanTotalPrice);
-
-  row.appendChild(colName);
-  row.appendChild(colPrice);
+  row.appendChild(createItemNode('string', { class: 'name', value: itemName }));
+  row.appendChild(createItemNode('number', { class: 'price', value: itemUnitPrice }));
   row.appendChild(createQuantityNode());
-  row.appendChild(colTotalPrice);
+  row.appendChild(createItemNode('number', { class: 'total-price', value: '0' }));
   row.appendChild(createDeleteButton());
 
   var cart = document.getElementById('cart');
