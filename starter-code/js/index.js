@@ -35,7 +35,13 @@ function getTotalPrice() {
 }
 
 function createQuantityInput(){
+  var input = document.createElement('input');
+  input.name = 'qty';
+  input.value = 0;
+  input.className = 'qty';
+  input.onkeyup = getTotalPrice;
 
+  return input;
 }
 
 function createDeleteButton(){
@@ -59,14 +65,8 @@ function createQuantityNode(){
   var label = document.createElement('label');
   label.innerHTML = 'QTY';
 
-  var input = document.createElement('input');
-  input.name = 'qty';
-  input.value = 0;
-  input.className = 'qty';
-  input.onkeyup = getTotalPrice;
-
   col.appendChild(label);
-  col.appendChild(input);
+  col.appendChild(createQuantityInput());
 
   return col;
 }
