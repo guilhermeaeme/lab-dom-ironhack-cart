@@ -87,8 +87,6 @@ function createItemNode(dataType, itemData){
 }
 
 function createNewItemRow(itemName, itemUnitPrice){
-  if(!itemName) return;
-
   var row = document.createElement('div');
   row.className = 'row';
 
@@ -105,10 +103,13 @@ function createNewItemRow(itemName, itemUnitPrice){
 function createNewItem(){
   var itemName = document.getElementById('new-item-name').value;
   var itemUnitPrice = document.getElementById('new-item-price').value;
-  createNewItemRow(itemName, itemUnitPrice);
+
+  if(!itemName || isNaN(Number(itemUnitPrice))) return;
 
   document.getElementById('new-item-name').value = '';
   document.getElementById('new-item-price').value = '';
+
+  createNewItemRow(itemName, itemUnitPrice);
 }
 
 function createNewItemKeyup(e){
