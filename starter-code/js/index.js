@@ -45,6 +45,7 @@ function createQuantityInput(){
   var input = document.createElement('input');
   input.name = 'qty';
   input.value = 0;
+  input.maxLength = 5;
   input.className = 'qty';
   input.onkeyup = getTotalPrice;
 
