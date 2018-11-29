@@ -24,6 +24,13 @@ function getTotalPrice() {
   for(i=0; i<prices.length; i++) {
     var price = Number(prices[i].innerHTML);
     var qty = Number(qtys[i].value);
+
+    if(isNaN(qty)) {
+      qty = 0;
+    }
+
+    qtys[i].value = qty;
+
     var subtotal = price * qty;
 
     total += subtotal;
