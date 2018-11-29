@@ -111,6 +111,12 @@ function createNewItem(){
   document.getElementById('new-item-price').value = '';
 }
 
+function createNewItemKeyup(e){
+  if(e.which == 13) {
+    createNewItem();
+  }
+}
+
 window.onload = function(){
   var calculatePriceButton = document.getElementById('calc-prices-button');
   var createItemButton = document.getElementById('new-item-create');
@@ -127,4 +133,7 @@ window.onload = function(){
   for(var i = 0; i<inputs.length ; i++){
     inputs[i].onkeyup = getTotalPrice;
   }
+
+  document.getElementById('new-item-name').onkeyup = createNewItemKeyup;
+  document.getElementById('new-item-price').onkeyup = createNewItemKeyup;
 };
