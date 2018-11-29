@@ -73,7 +73,7 @@ function createQuantityNode(){
 
 function createItemNode(dataType, itemData){
   var itemNode = document.createElement('div');
-  itemNode.className = 'col col-' + itemData.class;
+  itemNode.className = 'col';
   var spanNode = document.createElement('span');
   spanNode.className = 'span-' + itemData.class;
   if(dataType == 'number') {

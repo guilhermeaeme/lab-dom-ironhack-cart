@@ -87,8 +87,8 @@ footer {
   margin-left: 40%;
 }
 
-.col-price span:before,
-.col-total-price span:before,
+.span-price:before,
+.span-total-price:before,
 #total-price:before {
   content: '$ ';
 }
